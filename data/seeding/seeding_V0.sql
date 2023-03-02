@@ -1,11 +1,20 @@
-
 BEGIN;
+
+TRUNCATE TABLE 
+"roles",
+"users",
+"recipes",
+"ingredients",
+"units",
+"quantities",
+"steps"
+RESTART IDENTITY;
 
 INSERT INTO "roles"("name") VALUES
 ('user'),
 ('admin');
 
-INSERT INTO "users" ("lastname","firstname","email","password","role_id") VALUES
+INSERT INTO "users" ("lastname","firstname","email","password","roles_id") VALUES
 ('test','test','test@user.com','test',1),
 ('test','test','test@admin.com','test',2);
 
@@ -75,8 +84,8 @@ INSERT INTO "quantities"(
 (40,4,1,2),
 (150,5,1,1),
 (NULL,13,1,NULL),
-(1,6,2,),
-(4,3,2,),
+(1,6,2,NULL),
+(4,3,2,NULL),
 (40,8,2,2),
 (200,9,2,1),
 (200,7,2,1),
@@ -88,10 +97,10 @@ INSERT INTO "steps"("order","description","recipes_id") VALUES
 (1,'Préchauffer le four à 180',1),
 (2,'Dans un saladier bien mélanger farines + sucres + oeufs ',1),
 (3,'Verser le lait et bien mélanger',1),
-(4,'Beurrer le moule pour qu\'il n\'accroche pas trop',1),
+(4,'Beurrer le moule pour qu''il n''accroche pas trop',1),
 (5,'Verser le mélange dans le moule',1),
 (6,'Disposer les pruneaux dénoyautés',1),
-(6,'Placer au four',1),
+(7,'Placer au four',1),
 (1,'Préchauffer le four à 225°',2),
 (2,'Faire blanchier les lardons à la poele',2),
 (3,'Dans un saladier mélanger les oeufs et la crème',2),
@@ -102,6 +111,6 @@ INSERT INTO "steps"("order","description","recipes_id") VALUES
 (8,'Ajouter un peu de formage rapé (environ 1/3)',2),
 (9,'Dans un plat à tarte, déposer la pate brisée, faire des petits trou avec une fourchette dans la pate',2),
 (10,'Verser la préparation et la recouvrir de fromage rapé',2),
-(10,'Placer au four à 180°',2);
+(11,'Placer au four à 180°',2);
 
 COMMIT;
