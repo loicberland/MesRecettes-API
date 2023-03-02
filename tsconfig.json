@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "target": "es2017",
+      "module": "CommonJS",
+      "lib": ["esnext"],
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "strict": true,
+      "strictNullChecks": true,
+      "resolveJsonModule": true,
+      "skipDefaultLibCheck": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "outDir": "./dist",
+      "rootDir": "./src",//ici
+      "strictPropertyInitialization": false,      
+      "noEmit": true,
+      "paths": {
+        "~/*": ["./src/*"],
+        "~~/*": ["./*"]
+      }
+    },
+    "include": ["./src/**/*.ts"],//ici
+    "exclude": ["node_modules"],//ici
+    "ts-node": {
+      "require": ["tsconfig-paths/register"]
+    }
+  }
