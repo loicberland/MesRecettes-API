@@ -1,4 +1,4 @@
-import executeSqlFileInPG from '../../utils/executeSqlFileInPG.js'
+import executeSqlFileInPG from '../../utils/executeSqlFileInPG.mjs'
 import 'dotenv/config'
 
 const path = './data/migration/deploy/init_BDD.sql'
