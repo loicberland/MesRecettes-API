@@ -48,6 +48,7 @@
                 "message": "Use typed hooks `useAppDispatch` and `useAppSelector` instead."
             }
         ],
-        "@typescript-eslint/consistent-type-definitions": "off"
+        "@typescript-eslint/consistent-type-definitions": "off",
+        "@typescript-eslint/no-floating-promises": "off"
     }
 }
