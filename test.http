@@ -9,6 +9,6 @@ POST {{endpoint}}/login
 Content-Type: application/json
 
 {
-    "email" : "test@admin.com",
+    "email" : "test@admin88.com",
     "password" : "test"
 }

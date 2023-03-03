@@ -7,7 +7,6 @@ export default class User {
 	static tableName = 'users'
 
 	static findByEmail = async (email: string): Promise<UserData> => {
-		console.log(this.tableName)
 		const result = await client.query(
 			`
             SELECT 
