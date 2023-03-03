@@ -1,3 +1,5 @@
+import { type Request } from 'express'
+
 export type UserData = {
     id: number
     lastname: string
@@ -6,3 +8,10 @@ export type UserData = {
     password: string
     role: string
 }
+
+export interface LoginRequest extends Request {
+    body: {
+      email: string
+      password: string
+    }
+  }

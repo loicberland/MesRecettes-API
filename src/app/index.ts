@@ -12,6 +12,10 @@ app.use(cors({
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+router.get('/', (req, res) => {
+	res.send('hello')
+})
+
 app.use(router)
 
 export default app

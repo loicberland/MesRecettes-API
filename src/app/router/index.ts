@@ -1,8 +1,7 @@
 import express from 'express'
+import user from './api/user'
 const router = express.Router()
 
-router.get('/', (req, res) => {
-	res.send('hello')
-})
+router.use(user)
 
 export default router
