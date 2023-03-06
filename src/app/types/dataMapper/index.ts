@@ -5,7 +5,7 @@ export type UserData = {
     lastname: string
     firstname: string
     email: string
-    password: string
+    password?: string
     role: string
 }
 
