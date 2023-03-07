@@ -2,3 +2,5 @@ node_modules/
 dist/
 data/
 secret.mjs
+jest.config.js
+babel.config.js

@@ -1,4 +1,4 @@
-import { type Request } from 'express'
+import type { Request } from 'express'
 
 export type UserData = {
     id: number
@@ -9,9 +9,9 @@ export type UserData = {
     role: string
 }
 
-export interface LoginRequest extends Request {
-    body: {
-      email: string
-      password: string
-    }
+export interface LoginRequest extends Partial<Request> {
+  body: {
+    email: string
+    password: string
   }
+}

@@ -1,8 +1,8 @@
-import User from '~/app/models/User'
+import User from '../models/User'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import { type Response } from 'express'
-import type { LoginRequest } from '~/app/types/dataMapper'
+import type { LoginRequest } from '../types/dataMapper'
 import HttpError from '../errors/HTTPError'
 
 export const userController = {

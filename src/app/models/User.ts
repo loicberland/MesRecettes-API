@@ -1,6 +1,6 @@
-import client from '~/app/clients/pg'
+import client from '../clients/pg'
 
-import { type UserData } from '~/app/types/dataMapper'
+import { type UserData } from '../types/dataMapper'
 
 // eslint-disable-next-line @typescript-eslint/no-extraneous-class
 export default class User {
